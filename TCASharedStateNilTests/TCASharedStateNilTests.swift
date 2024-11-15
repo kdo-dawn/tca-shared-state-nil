@@ -18,7 +18,7 @@ final class TCASharedStateNilTests: XCTestCase {
         }
 
         await store.send(\.view.resetButtonTapped) {
-            $0.sharedValue = nil
+            $0.sharedValue = nil /// <--- This fails the value is still "test"
         }
     }
 
